@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="src/styles/reset.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <button class="toggle-theme" onclick="toggleTheme()"><i class="fa-solid fa-lightbulb"></i> Alternar Tema</button>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fa-solid fa-leaf"></i> Basic To-Do List</h1>
+      <p>Organize sua rotina de forma simples!</p>
+    </header>
+
+    <section class="summary">
+      <div class="card pink"><i class="fa-solid fa-calendar-day"></i> Hoje: <span>3</span></div>
+      <div class="card yellow"><i class="fa-solid fa-hourglass-half"></i> Pendentes: <span>5</span></div>
+      <div class="card green"><i class="fa-solid fa-circle-check"></i> Concluídas: <span>10</span></div>
+    </section>
+
+    <main class="todo-list">
+      <article class="todo-item">
+        <div class="todo-info">
+          <h3>Estudar HTML</h3>
+          <p>Categoria: Estudo | Prioridade: Alta</p>
+        </div>
+        <div class="todo-actions">
+          <button class="check"><i class="fa-solid fa-circle-check"></i></button>
+          <button class="edit"><i class="fa-solid fa-pen"></i></button>
+          <button class="delete"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </article>
+
+      <article class="todo-item">
+        <div class="todo-info">
+          <h3>Pagar Netflix</h3>
+          <p>Categoria: Saúde | Prioridade: Média</p>
+        </div>
+        <div class="todo-actions">
+          <button class="check"><i class="fa-solid fa-circle-check"></i></button>
+          <button class="edit"><i class="fa-solid fa-pen"></i></button>
+          <button class="delete"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </article>
+
+      <article class="todo-item completed">
+        <div class="todo-info">
+          <h3>Enviar Mensagem</h3>
+          <p>Categoria: Trabalho | Prioridade: Baixa</p>
+        </div>
+        <div class="todo-actions">
+          <button class="check"><i class="fa-solid fa-circle-check"></i></button>
+          <button class="edit"><i class="fa-solid fa-pen"></i></button>
+          <button class="delete"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </article>
+    </main>
+
+    <section class="form-container hidden">
+      <h2>Nova Tarefa</h2>
+      <form id="task-form">
+        <input type="text" id="titulo" placeholder="Título da tarefa" required />
+        <input type="text" id="categoria" placeholder="Categoria" />
+        <select id="prioridade">
+          <option value="Alta">Alta</option>
+          <option value="Média">Média</option>
+          <option value="Baixa">Baixa</option>
+        </select>
+        <button type="submit">Salvar Tarefa</button>
+      </form>
+    </section>
+
+    <button class="add-task"><i class="fa-solid fa-plus"></i> Adicionar Tarefa</button>
+
+  </div>
+
+  <!-- JavaScript externo -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
